@@ -32,23 +32,24 @@ header #littleme {
     background-size: 100% 100%;
     position:absolute;
     top: 13px;
-    right: 12%;
-}
-
-@media screen and (max-width: 1350px) {
-    header p {
-        padding-left: 0;
-        padding-top: 7px;
-        text-align: center;
-        font-size: xx-large;
-    }
+    right: calc(35% - 160px);
 }
 
 #shortbio {
-    margin-top: 65px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 15px;
+    max-width: 700px;
+    margin: 30px auto;
     font-size: x-large;
     text-align: center;
+}
+
+@media screen and (max-width: 1700px) {
+    header p {
+        padding-left: 0;
+        padding-top: 15px;
+        text-align: center;
+        font-size: 28px;
+    }
+    #shortbio {
+        margin-top: 60px;
+    }
 }
