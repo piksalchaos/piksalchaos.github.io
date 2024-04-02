@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    color: black;
+    margin: auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+header {
+    background-color: #708fff;
+    color: white;
+    height: 250px;
+}
+
+header p {
+    padding-left: 20%;
+    padding-top: 60px;
+    font-size:xxx-large;
+}
+
+header #littleme {
+    width: 320px;
+    height: 320px;
+    background: url('assets/images/me on the header.webp');
+    background-size: 100% 100%;
+    position:absolute;
+    top: 13px;
+    right: 12%;
+}
+
+@media screen and (max-width: 1350px) {
+    header p {
+        padding-left: 0;
+        padding-top: 7px;
+        text-align: center;
+        font-size: xx-large;
+    }
+}
+
+#shortbio {
+    margin-top: 65px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    font-size: x-large;
+    text-align: center;
+}
