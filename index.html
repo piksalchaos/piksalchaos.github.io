@@ -4,24 +4,32 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="main.css">
+  <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.min.js"></script>
   <title>Piksal's Website</title>
 </head>
+<!-- 
+  task list:
+  add header background
+  put full project list
+  about me page
+  font
+ -->
 
 <body>
   <header>
     <p>Welcome to Piksal's Website!</p>
     <div id="littleme"></div>
     <nav>
-      <a href="https://www.youtube.com/@piksalchaos">
+      <a href="https://www.youtube.com/@piksalchaos" class="hoverlink">
         <img src="assets/images/icon links/youtube.webp" alt="youtube logo" width="80" title="See my animations on Youtube!">
       </a>
-      <a href="https://www.instagram.com/piksal.chaos/">
+      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink">
         <img src="assets/images/icon links/insta.webp" alt="instagram logo" width="80" title="Currently inactive on Instagram">
       </a>
-      <a href="https://piksal.itch.io/">
+      <a href="https://piksal.itch.io/" class="hoverlink">
         <img src="assets/images/icon links/itch.webp" alt="itch.io logo" width="80" title="Find my games on itch.io">
       </a>
-      <a href="https://github.com/piksalchaos">
+      <a href="https://github.com/piksalchaos" class="hoverlink">
         <img src="assets/images/icon links/github.webp" alt="github logo" width="80" title="See all of my projects on Github">
       </a>
     </nav>
@@ -37,15 +45,72 @@
    </p>
   </div>
 
+  <nav id="nutshells">
+    <h2>:About Me</h2>
+    <article>
+      <p>
+        WIP don't look at this
+      </p>
+    </article>
+    <h2>:Skills</h2>
+    <article>
+      <h4>Languages ranked best at to worst at:</h4>
+      <ol>
+        <li><em>Lua</em> - I use it for game development in <em>LÖVE</em></li>
+        <li><em>Python</em> - First language learned of course</li>
+        <li><em>GDScript</em> - the language that's used in the <em>Godot</em> game engine!</li>
+        <li><em>HTML/CSS</em> - learned it in middle school and while making this website</li>
+        <li><em>C/C++</em> - Used it a lot during my time in the high school Robotics team</li>
+        <li><em>C#</em> - I used to use this language for game development in Monogame, now I
+          forgot everything :P</li>
+        <li><em>Javascript/Typescript</em> - Forgot most of it, but I'm hoping to learn it
+          again!</li>
+        <li><em>Vietnamese</em> - All my Vietnamese relatives bully
+          me for my heavy American accent.
+        </li>
+      </ol>
+      <br><h4>Other miscellaneous skills</h4>
+      <ul>
+        <li>Basic CAD with <em>Onshape</em></li>
+        <li>Has animation experience in <em>Adobe Animate</em> and <em>Tahoma2D</em> (which is basically a fork of <em>Opentoonz</em>)</li>
+      </ul>
+    </article>
+    <h2>:Hobbies</h2>
+    <article>
+      <ul>
+        <li>The skills in the bubble above (loll what a nerd)</li>
+        <li>pixel art (Aseprite)</li>
+        <li>digital art (Krita)</li>
+        <li>Doodling random crap in MSPaint</li>
+        <li>Crocheting small things</li>
+        <li>Origami (it' my childhood hobby ✨)</li>
+        <li>Making bad chiptune music for games (I use LMMS and sometimes FamiStudio)</li>
+        <li>Reading (occasionally) - Favorite book is <em>Project Hail Mary</em>!</li>
+        <li>Papercrafts (mostly Minecraft, but sometimes complex designs)</li>
+        <li>Playing indie games - <em>Oneshot</em> is my favorite right now</li>
+        <li>Linux ricing (I don't go outside)</li>
+      </ul>
+    </article>
+  </nav>
+
   <h1>Projects</h1>
   <div id="projects">
-    <a href="https://piksal.itch.io/spacecat-adventure">
+    <a href="https://piksal.itch.io/spacecat-adventure" class="hoverlink">
       <img src="assets/images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure" width="300px">
       <p><span>Spacecat Adventure</span><br>- A short platformer and the first game I've ever released online</p>
     </a>
-    <a href="https://piksal.itch.io/spacecat-adventure">
-      <img src="assets/images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure but again" width="300px">
-      <p><span>Spacecat Adventure (but again :O)</span><br>-pls ignore thumbnail it's temporary</p>
-    </a>
+    <p>(thumbnail above is just temporary)</p>
+  </div>
+
+  <footer>
+    <span>
+      <a href='https://ncase.me/nutshell'>Nutshell</a>
+      by <a href="https://ncase.me">Nicky Case</a>
+    </span>
+    <span><b>&middot;</b></span>
+    <span>
+      wefasdfsdf
+    </span>
+  </footer>
 </body>
 </html> 

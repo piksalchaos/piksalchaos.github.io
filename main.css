@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: white;
+    background-color: #ffffff;
     color: black;
     margin: auto;
     font-family: "Montserrat", sans-serif;
@@ -16,30 +16,37 @@ body {
     text-align: center;
 }
 
+h1 {
+    font-weight: 400;
+}
+
 a {
-    text-decoration: none;
     color: inherit;
+}
+
+.hoverlink {
+    text-decoration: none;
     position: relative;
     top: 0px;
     transition: top 0.1s ease-in-out;
 }
 
 
-a img {
+.hoverlink img {
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
 }
 
-a:hover {
+.hoverlink:hover {
     top: -6px;
 }
 
-a:hover img {
+.hoverlink:hover img {
     transform: scale(1.1);
 }
 
 header {
-    background-color: #9162ff;
+    background-color: #6b6b6b;
     color: white;
     height: 250px;
 }
@@ -58,19 +65,20 @@ header nav {
 }
 
 header #littleme {
-    width: 320px;
+    width: 160px;
     height: 320px;
     background: url('assets/images/me on the header.webp');
     background-size: 100% 100%;
     position:absolute;
     top: 13px;
-    right: calc(35% - 160px);
+    right: calc(30% - 80px);
+    margin-left: 30px;
 }
 
 #shortbio {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 30px;
+    max-width: 750px;
+    margin: 30px auto 0px auto;
+    padding: 0 10px;
     font-size: x-large;
 }
 
@@ -88,7 +96,7 @@ header #littleme {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 30px;
+    margin: 40px 30px;
 }
 
 #projects img {
@@ -107,10 +115,34 @@ header #littleme {
     font-weight: 500;
 }
 
-article {
+
+
+#nutshells {
+    font-size: x-large;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+#nutshells article {
     max-width: 800px; 
-    margin: 30px auto;
+    margin: 30px 10px;
     padding: 0 30 px;
+    font-size: large;
+    text-align: left;
+}
+
+footer {
+    margin-top: 200px; /*temporary */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: black;
+    color: white;
+}
+
+footer span {
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @media screen and (max-width: 1700px) {
@@ -125,11 +157,23 @@ article {
     }
 }
 
+@media screen and (max-width: 800px) {
+    #nutshells {
+        margin-left: 6%;
+        margin-right: 4%;
+    }
+}
+
 @media screen and (max-width: 660px) {
     header nav {
         top: 60px;
         width: 200px;
     }
+
+    #nutshells {
+        margin-bottom: 30px;
+    }
+
     #projects a {
         display: inline;
     }
