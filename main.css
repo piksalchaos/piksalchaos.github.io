@@ -103,7 +103,7 @@ header #littleme {
     margin: 0 30px;
     border-style: solid;
     border-width: 4px;
-    border-color: black;
+    border-color: #3d3d3d;
 }
 
 #projects p {
