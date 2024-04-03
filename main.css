@@ -71,7 +71,7 @@ header #littleme {
     background-size: 100% 100%;
     position:absolute;
     top: 13px;
-    right: calc(30% - 80px);
+    right: calc(25% - 80px);
     margin-left: 30px;
 }
 
@@ -145,10 +145,10 @@ footer span {
     margin-right: 10px;
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1400px) {
     header p {
         padding-left: 0;
-        padding-top: 15px;
+        padding-top: 4px;
         font-size: 28px;
         text-align: center;
     }
@@ -166,7 +166,8 @@ footer span {
 
 @media screen and (max-width: 660px) {
     header nav {
-        top: 60px;
+        left: 2%;
+        top: 80px;
         width: 200px;
     }
 
@@ -185,5 +186,11 @@ footer span {
     }
     #projects p {
         margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    header #littleme {
+        background: none;
     }
 }
