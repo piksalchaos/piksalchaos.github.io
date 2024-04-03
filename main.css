@@ -11,18 +11,23 @@ body {
     color: black;
     margin: auto;
     font-family: "Montserrat", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+    text-align: center;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
     position: relative;
     top: 0px;
-    transition: 0.1s ease-in-out;
+    transition: top 0.1s ease-in-out;
 }
+
 
 a img {
     transform: scale(1);
-    transition: 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out;
 }
 
 a:hover {
@@ -30,7 +35,6 @@ a:hover {
 }
 
 a:hover img {
-    filter: brightness(120%);
     transform: scale(1.1);
 }
 
@@ -44,6 +48,7 @@ header p {
     padding-left: 20%;
     padding-top: 60px;
     font-size:xxx-large;
+    text-align: left;
 }
 
 header nav {
@@ -67,19 +72,53 @@ header #littleme {
     margin: 30px auto;
     padding: 0 30px;
     font-size: x-large;
-    text-align: center;
 }
 
 #shortbio p {
     padding-bottom: 10px;
 }
 
+#projects {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: x-large;
+}
+
+#projects a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px;
+}
+
+#projects img {
+    margin: 0 30px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+}
+
+#projects p {
+    margin-right: 30px;
+    color: #9c9c9c;
+}
+#projects p span {
+    color: black;
+    font-weight: 500;
+}
+
+article {
+    max-width: 800px; 
+    margin: 30px auto;
+    padding: 0 30 px;
+}
+
 @media screen and (max-width: 1700px) {
     header p {
         padding-left: 0;
         padding-top: 15px;
-        text-align: center;
         font-size: 28px;
+        text-align: center;
     }
     #shortbio {
         margin-top: 60px;
@@ -90,5 +129,17 @@ header #littleme {
     header nav {
         top: 60px;
         width: 200px;
+    }
+    #projects a {
+        display: inline;
+    }
+    #projects img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    #projects p {
+        margin-left: 40px;
     }
 }
