@@ -46,18 +46,11 @@ a {
 }
 
 header {
-    background-color: #6b6b6b;
+    background: rgb(117,110,207);
+    background: linear-gradient(90deg, rgba(117,110,207,1) 0%, rgba(246,215,255,1) 100%);
     color: white;
     height: 250px;
 }
-
-header p {
-    padding-left: 20%;
-    padding-top: 60px;
-    font-size:xxx-large;
-    text-align: left;
-}
-
 header nav {
     position: absolute;
     top: 160px;
@@ -73,6 +66,16 @@ header #littleme {
     top: 13px;
     right: calc(25% - 80px);
     margin-left: 30px;
+}
+
+header #greeting {
+    width: 700px;
+    height: 100px;
+    left: 20%;
+    top: 60px;
+    position: absolute;
+    background: url('assets/images/header\ title.webp');
+    background-size: 100%, 100%;
 }
 
 #shortbio {
@@ -132,12 +135,21 @@ header #littleme {
     text-align: left;
 }
 
+#nutshells article p {
+    margin-bottom: 20px;
+}
+
 footer {
     margin-top: 200px; /*temporary */
     padding-top: 15px;
-    padding-bottom: 15px;
     background-color: black;
     color: white;
+    text-align: right;
+    padding-right: 100px;
+}
+
+footer img {
+    width: 100px;
 }
 
 footer span {
@@ -146,12 +158,13 @@ footer span {
 }
 
 @media screen and (max-width: 1400px) {
-    header p {
-        padding-left: 0;
-        padding-top: 4px;
-        font-size: 28px;
-        text-align: center;
+    header #greeting {
+        width: 420px;
+        height: 60px;
+        left: calc(50% - 210px);
+        top: 10px;
     }
+    
     #shortbio {
         margin-top: 60px;
     }
