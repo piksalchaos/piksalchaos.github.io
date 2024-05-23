@@ -60,7 +60,7 @@ header nav {
 header #littleme {
     width: 160px;
     height: 320px;
-    background: url('assets/images/me on the header.webp');
+    background: url('images/me on the header.webp');
     background-size: 100% 100%;
     position:absolute;
     top: 13px;
@@ -74,7 +74,7 @@ header #greeting {
     left: 20%;
     top: 60px;
     position: absolute;
-    background: url('assets/images/header\ title.webp');
+    background: url('images/header\ title.webp');
     background-size: 100%, 100%;
 }
 
@@ -105,8 +105,8 @@ header #greeting {
 #projects img {
     margin: 0 30px;
     border-style: solid;
-    border-width: 4px;
-    border-color: #3d3d3d;
+    border-width: 5px;
+    border-color: #553b92;
 }
 
 #projects p {
