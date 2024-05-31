@@ -11,7 +11,7 @@ function startAnimation() {
     animateBounce();
     
     console.log(`sfx/${Math.floor(Math.random()*21)}.mp3`);
-    const sound = new Audio(`sfx/${Math.floor(Math.random()*30.99)}.mp3`);
+    const sound = new Audio(`sfx/${Math.floor(Math.random()*28.99)}.mp3`);
     sound.play();
 }
 
