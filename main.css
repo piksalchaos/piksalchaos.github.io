@@ -45,12 +45,6 @@ a {
     transform: scale(1.12);
 }
 
-header {
-    background: rgb(117,110,207);
-    background: linear-gradient(90deg, rgba(117,110,207,1) 0%, rgba(246,215,255,1) 100%);
-    color: white;
-    height: 250px;
-}
 header nav {
     position: absolute;
     top: 160px;
@@ -70,12 +64,27 @@ header #littleme {
 
 header #greeting {
     width: 700px;
-    height: 100px;
+    height: 70px;
     left: 20%;
     top: 60px;
     position: absolute;
-    background: url('images/header\ title.webp');
+    background: url('images/header title.webp');
     background-size: 100%, 100%;
+
+    image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: pixelated;                 /* Universal support since 2021   */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor; 
+}
+
+#headerCanvas {
+    background: #1c1630;
+    background: linear-gradient(160deg, rgb(46, 40, 128) 0%, #1c1630 100%);
+    width: 1920;
+    height: 250px;
 }
 
 #shortbio {
@@ -160,7 +169,7 @@ footer span {
 @media screen and (max-width: 1400px) {
     header #greeting {
         width: 420px;
-        height: 60px;
+        height: 42px;
         left: calc(50% - 210px);
         top: 10px;
     }
