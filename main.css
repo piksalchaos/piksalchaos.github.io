@@ -1,4 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --rose-pine-base: #191724;        /* Base Background */
+    --rose-pine-surface: #1f1d2e;     /* Surface Background */
+    --rose-pine-overlay: #26233a;     /* Overlay Background */
+    --rose-pine-muted: #6e6a86; /* Muted Color (Gray) */
+    --rose-pine-subtle: #908caa;
+    
+    --rose-pine-pine: #31748f; /* Pine Color (Warm Yellow) */
+    --rose-pine-rose: #ebbcba;         /* Rose Color (Soft Lavender) */
+    --rose-pine-foam: #9ccfd8; /* Foam Color (Cool Light Blue) */
+    --rose-pine-love: #eb6f92;
+    --rose-pine-gold: #f6c177;
+    --rose-pine-iris: #c4a7e7;
+    
+    --rose-pine-text: #e0def4; /* Text Color (Soft Gray) */
+    --rose-pine-highlightlow: #21202e;
+    --rose-pine-highlightmed: #403d52;
+    --rose-pine-highlighthigh: #524f67;
+}
+
+@font-face {
+    font-family: 'rainyhearts';
+    src: url('fonts/rainyhearts.woff2') format('woff2'),
+         url('fonts/rainyhearts.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 * {
     padding: 0;
@@ -7,21 +33,38 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: black;
+    background-color: black;
+    color: var(--rose-pine-text);
     margin: auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'rainyhearts', serif;
+    font-size: 2rem;
     max-width: 100%;
     overflow-x: hidden;
     text-align: center;
 }
 
 h1 {
-    font-weight: 400;
+    font-weight: bold;
+    font-size: 3rem;
+    color: var(--rose-pine-iris);
 }
 
 a {
     color: inherit;
+}
+
+#headerCanvas {
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+#main {
+    background-color: var(--rose-pine-base);
+    max-width: 850px;
+    margin: 250px auto 0 auto;
+    padding: 20px
 }
 
 .hoverlink {
@@ -45,20 +88,14 @@ a {
     transform: scale(1.12);
 }
 
-header nav {
-    position: absolute;
-    top: 160px;
-    left: 20px;
-}
-
 header #littleme {
     width: 160px;
     height: 320px;
-    background: url('images/me on the header.webp');
+    background: url('images/silly/lilme.gif');
     background-size: 100% 100%;
     position:absolute;
     top: 13px;
-    right: calc(25% - 80px);
+    right: calc(50% - 420px);
     margin-left: 30px;
 }
 
@@ -80,57 +117,64 @@ header #greeting {
     -ms-interpolation-mode: nearest-neighbor; 
 }
 
-#headerCanvas {
-    background: #1c1630;
-    background: linear-gradient(160deg, rgb(46, 40, 128) 0%, #1c1630 100%);
-    width: 1920;
-    height: 250px;
-}
-
 #shortbio {
-    max-width: 750px;
-    margin: 30px auto 0px auto;
-    padding: 0 10px;
-    font-size: x-large;
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 #shortbio p {
-    padding-bottom: 10px;
+    text-align: left;
+}
+
+#shortbio img {
+    margin-right: 45px;
+}
+
+#biolinks {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 20px;
 }
 
 #projects {
-    max-width: 750px;
+    max-width: 800px;
     margin: 0 auto;
-    font-size: x-large;
+    font-size: 2rem;
+}
+
+#links {
+    margin-bottom: 45px;
 }
 
 #projects a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 30px;
+    margin: 30px 0px;
 }
 
 #projects img {
     margin: 0 30px;
     border-style: solid;
     border-width: 5px;
-    border-color: #553b92;
+    border-color: var(--rose-pine-highlightmed);
 }
 
 #projects p {
     margin-right: 30px;
-    color: #9c9c9c;
+    color: var(--rose-pine-muted);
 }
 #projects p span {
-    color: black;
-    font-weight: 500;
+    color: var(--rose-pine-text);
+    font-weight: bold;
 }
 
-
-
 #nutshells {
-    font-size: x-large;
+    font-size: 2rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -140,7 +184,7 @@ header #greeting {
     max-width: 800px; 
     margin: 30px 10px;
     padding: 0 30 px;
-    font-size: large;
+    font-size: 1rem;
     text-align: left;
 }
 
@@ -174,8 +218,12 @@ footer span {
         top: 10px;
     }
     
-    #shortbio {
-        margin-top: 60px;
+    #main {
+        padding-top: 45px;
+    }
+
+    header #littleme {
+        right: calc(50% - 130px);
     }
 }
 
@@ -186,13 +234,19 @@ footer span {
     }
 }
 
-@media screen and (max-width: 660px) {
-    header nav {
-        left: 2%;
-        top: 80px;
-        width: 200px;
+@media screen and (max-width: 750px) {
+    #shortbio {
+        display: block;
     }
+    #shortbio img {
+        margin-right: auto;
+    }
+    #shortbio p {
+        text-align: center
+    }
+}
 
+@media screen and (max-width: 660px) {
     #nutshells {
         margin-bottom: 30px;
     }
@@ -208,6 +262,16 @@ footer span {
     }
     #projects p {
         margin-left: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #biomiddash {
+        display: none
+    }
+    #biolinks a {
+        display: block;
+        text-align: left;
     }
 }
 

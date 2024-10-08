@@ -1,12 +1,12 @@
-window.addEventListener('focus', initialize);
+window.addEventListener('DOMContentLoaded', initialize);
 window.addEventListener('resize', function() {
-    canvas.width = window.innerWidth;
+    setCanvasDimensions(canvas)
     context.lineWidth = 3;
+    initialize();
 })
-
 const canvas = document.getElementById('headerCanvas');
-canvas.width = window.innerWidth;
-canvas.height = 250;
+const mainBody = document.getElementById("main");
+setCanvasDimensions(canvas);
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
@@ -14,6 +14,15 @@ context.lineWidth = 3;
 let previousTime_ms;
 
 let fishies = []
+
+function setCanvasDimensions(canvas) {
+    canvas.width = window.innerWidth
+    canvas.height = Math.max(
+        window.innerHeight,
+        mainBody.scrollHeight + 250
+    );
+    //console.log(window.getComputedStyle(mainBody).marginTop);
+}
 
 class Fish {
     static SPEED = 200;
@@ -54,6 +63,7 @@ class Fish {
         if (this.alphaRadians > Math.PI*2) {
             this.alphaRadians -= Math.PI*2;
         }
+        console.log(fishies.length);
     }
 
     draw(context) {
@@ -83,7 +93,7 @@ class Fish {
 
         context.fill();
 
-        context.restore()
+        context.restore();
     }
 
     getAlpha() {
@@ -91,27 +101,25 @@ class Fish {
     }
 }
 
-function newFish(isStartingOnTop = false) {
+function newFish(yPosition = Math.random() * canvas.height) {
     let x = Math.random() * (canvas.width + canvas.height) - canvas.height;
-    let y;
-     
-    if (isStartingOnTop) {
-        y = 0;
-    } else {
-        y = Math.random() * canvas.height;
-    }
+    let y = yPosition;
+
     return new Fish(x, y);
 }
 
 function update() {
     const currentTime_ms = performance.now();
-    const deltaTime = (currentTime_ms - previousTime_ms)/1000;
+    const deltaTime = Math.min(currentTime_ms - previousTime_ms)/1000;
     previousTime_ms = currentTime_ms;
 
     for (let i=0; i<fishies.length; i++) {
         fishies[i].update(deltaTime);
-        if (fishies[i].x > canvas.width+60 || fishies[i].y > canvas.height+60) {
-            fishies[i] = newFish(true);
+        if (fishies[i].y > canvas.height+60) {
+            fishies[i] = newFish(fishies[i].y % (canvas.height+60));
+        }
+        if (fishies[i].x > canvas.width+60) {
+            fishies[i] = newFish(fishies[i].x % (canvas.width+60));
         }
     }
 
@@ -129,7 +137,7 @@ function draw() {
 
 function initialize() {
     fishies = [];
-    for (i=0; i<150; i++) {
+    for (i=0; i<(canvas.width*canvas.height) * 0.0001; i++) {
         fishies.push(newFish());
     }
 }

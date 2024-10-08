@@ -15,107 +15,67 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="main.css">
-  <script src="https://cdn.jsdelivr.net/gh/ncase/nutshell/nutshell.min.js"></script>
+
+  <script src="js/headerCanvas.js" type="text/javascript" defer></script>
 </head>
 <!-- 
   task list:
   put full project list
  -->
-
 <body>
-  
+  <canvas id="headerCanvas"></canvas>
+
   <header>
-    <canvas id="headerCanvas"></canvas>
-    <script src="js/headerCanvas.js" type="text/javascript"></script>
-    
-    <div id="greeting"></div>
     <div id="littleme" title="Loud sound warning: click to squish me"></div>
     <script src="js/littleme.js" type="text/javascript"></script>
-    
-    <nav>
-      <a href="https://www.youtube.com/@piksalchaos" class="hoverlink">
-        <img src="images/icon links/youtube.webp" alt="youtube logo" width="80" title="See my animations on Youtube!">
+  </header>
+
+  <div id="main">
+    <h1> Hellooooo, I'm Justin Le! </h1>
+
+    <div id="shortbio">
+      <img src="images/silly/self.gif" alt='doodle of me!"'>
+      <div>
+        <p>
+          I like to do  animation and  game development
+          in my free time.
+        </p>
+        <div id="biolinks">
+          <a class="hoverlink" style="color:var(--rose-pine-rose)">About Me</a>
+          <span id="biomiddash"> - </span>
+          <a class="hoverlink" style="color:var(--rose-pine-foam)">Blog</a>
+        </div>
+      </div>
+    </div>
+
+    <nav id="links">
+      <a href="https://www.youtube.com/@piksalchaos" class="hoverlink" style="color:var(--rose-pine-love)">
+        youtube
       </a>
-      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink">
-        <img src="images/icon links/insta.webp" alt="instagram logo" width="80" title="Currently inactive on Instagram">
+      <span>&middot;</span>
+      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink" style="color:var(--rose-pine-rose)">
+        instagram
       </a>
-      <a href="https://piksal.itch.io/" class="hoverlink">
-        <img src="images/icon links/itch.webp" alt="itch.io logo" width="80" title="Find my games on itch.io">
+      <span>&middot;</span>
+      <a href="https://piksal.itch.io/" class="hoverlink" style="color:var(--rose-pine-love)">
+        itch.io
       </a>
-      <a href="https://github.com/piksalchaos" class="hoverlink">
-        <img src="images/icon links/github.webp" alt="github logo" width="80" title="See all of my projects on Github">
+      <span>&middot;</span>
+      <a href="https://github.com/piksalchaos" class="hoverlink" style="color:var(--rose-pine-foam)">
+        github
+      </a>
+      <span>&middot;</span>
+      <a href="https://www.linkedin.com/in/justin-le-800854321/" class="hoverlink" style="color:var(--rose-pine-pine)">
+        linkedin
       </a>
     </nav>
-  </header>
-  
-  <div id="shortbio">
-    <p style="font-size:30px" >
-      Hellooooo, I'm Justin Le!
-    </p>
-    <p>
-      I like to do  animation and  game development (unprofessionally)
-      in my free time.
-   </p>
-  </div>
-
-  <nav id="nutshells">
-    <h2>:About Me</h2>
-    <article>
-      <img src="images/silly/hello yalls.png" alt='little me going "Hello Yalls!"'>
-      <p>
-        I'm a high school junior (assuming that I don't forget to update this
-        page) with a bit of a passion for art and computer science. I want to make
-        things that are expressive and fun!
-      </p>
-    </article>
-    <h2>:Skills</h2>
-    <article>
-      <h4>Languages ranked best at to worst at:</h4>
-      <ol>
-        <li><em>Lua</em> - I use it for game development in <em>LÖVE</em></li>
-        <li><em>Python</em> - First language learned of course</li>
-        <li><em>GDScript</em> - the language that's used in the <em>Godot</em> game engine!</li>
-        <li><em>HTML/CSS</em> - learned it in middle school and while making this website</li>
-        <li><em>Javascript/Typescript</em> - Used it while playing with Phaser.js and adding the silly fish in this website.
-           Also, did you know that you can interact with the character on the top right by clicking on him?</li>
-        <li><em>C/C++</em> - Used it a lot during my time in my high school Robotics team and I hope I never see it again.</li>
-        <li><em>C#</em> - I used to use this language for game development in Monogame, now I
-          forgot everything :P</li>
-        <li><em>Vietnamese</em> - All my Vietnamese relatives bully me cuz I sound so bad :(</li>
-      </ol>
-      <br><h4>Other miscellaneous skills</h4>
-      <ul>
-        <li>Basic CAD with <em>Onshape</em></li>
-        <li>Animation experience in <em>Adobe Animate</em> and <em>Tahoma2D</em> (which is basically a fork of <em>Opentoonz</em>).</li>
-      </ul>
-    </article>
-    <h2>:Hobbies</h2>
-    <article>
-      <ul>
-        <li>pixel art (Aseprite)</li>
-        <li>digital art (Krita)</li>
-        <li>Doodling random crap in MSPaint</li>
-        <li>Crocheting small things</li>
-        <li>Origami (it' my childhood hobby ✨)</li>
-        <li>Making bad chiptune music for games (I use LMMS and sometimes FamiStudio)</li>
-        <li>Reading (occasionally) - Favorite book is <em>Project Hail Mary</em>!</li>
-        <li>Papercrafts (mostly Minecraft, but sometimes complex designs)</li>
-        <li>Playing indie games - <em>Oneshot</em> is my favorite right now</li>
-        <li>Making <a href="https://www.desmos.com/3d/2lcmtj5epn">monstrosities</a> in Desmos</li>
-        <li>Linux ricing (I don't go outside)</li>
-      </ul>
-      <img src="images/silly/origamicubes.webp">
-      <p>I like to make these origami <a href="https://www.youtube.com/watch?v=Y8ljs9s9yqI">:fujimoto cubes</a>
-      whenever I'm bored!</p>
-    </article>
-  </nav>
-
-  <h1>Projects</h1>
-  <div id="projects">
-    <a href="https://piksal.itch.io/spacecat-adventure" class="hoverlink">
-      <img src="images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure" width="300px">
-      <p><span>Spacecat Adventure</span><br>- A short platformer and the first game I've ever released online</p>
-    </a>
+    <h1>Projects</h1>
+    <div id="projects">
+      <a href="https://piksal.itch.io/spacecat-adventure" class="hoverlink">
+        <img src="images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure" width="300px">
+        <p><span>Spacecat Adventure</span><br>A short platformer and the first game I've ever released online</p>
+      </a>
+    </div>
   </div>
   <!--
   <footer>
