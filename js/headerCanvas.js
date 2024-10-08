@@ -1,12 +1,8 @@
 window.addEventListener('DOMContentLoaded', initialize);
-window.addEventListener('resize', function() {
-    setCanvasDimensions(canvas)
-    context.lineWidth = 3;
-    initialize();
-})
+window.addEventListener('resize', initialize)
+
 const canvas = document.getElementById('headerCanvas');
 const mainBody = document.getElementById("main");
-setCanvasDimensions(canvas);
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
@@ -14,15 +10,6 @@ context.lineWidth = 3;
 let previousTime_ms;
 
 let fishies = []
-
-function setCanvasDimensions(canvas) {
-    canvas.width = window.innerWidth
-    canvas.height = Math.max(
-        window.innerHeight,
-        mainBody.scrollHeight + 250
-    );
-    //console.log(window.getComputedStyle(mainBody).marginTop);
-}
 
 class Fish {
     static SPEED = 200;
@@ -135,12 +122,21 @@ function draw() {
     }
 }
 
+function setCanvasDimensions(canvas) {
+    canvas.width = window.innerWidth
+    canvas.height = Math.max(
+        window.innerHeight,
+        mainBody.scrollHeight + 350
+    );
+    //console.log(window.getComputedStyle(mainBody).marginTop);
+}
+
 function initialize() {
+    setCanvasDimensions(canvas)
     fishies = [];
     for (i=0; i<(canvas.width*canvas.height) * 0.0001; i++) {
         fishies.push(newFish());
     }
 }
 
-initialize();
 update();
