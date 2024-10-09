@@ -26,7 +26,7 @@ function animateBounce() {
     }
     littleme.style.width = `${(1-bounceFactor)*240+bounceFactor*160}px`;
     littleme.style.height = `${(1-bounceFactor)*160+bounceFactor*320}px`;
-    littleme.style.top = `${(1-bounceFactor)*130+bounceFactor*13}px`;
+    littleme.style.top = `${(1-bounceFactor)*80+bounceFactor*(-37)}px`;
     littleme.style.right = `calc(50% - ${(1-bounceFactor)*460+bounceFactor*420}px)`;
 }
 
