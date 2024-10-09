@@ -13,6 +13,7 @@ const mainBody = document.getElementById("main");
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
+const OFFSCREEN_OFFSET = 90
 
 let previousTime_ms;
 
@@ -28,11 +29,12 @@ class Fish {
     static TAIL_LENGTH_RATIO = 0.4;
     static TAIL_WIDTH_RATIO = 0.1;
 
+
     constructor(x, y) {
         this.x = x;
         this.y = y;
 
-        this.size = 10 + Math.random() * 40; 
+        this.size = 20 + Math.random() * 50; 
 
         this.angle = Math.PI*0.25 + (Math.random()-0.9)*0.25;
         this.wiggleRadians = Math.random() * Math.PI*2;
@@ -109,11 +111,11 @@ function update() {
 
     for (let i=0; i<fishies.length; i++) {
         fishies[i].update(deltaTime);
-        if (fishies[i].y > canvas.height+60) {
-            fishies[i] = newFish(fishies[i].y % (canvas.height+60));
+        if (fishies[i].y > canvas.height+OFFSCREEN_OFFSET) {
+            fishies[i] = newFish(fishies[i].y%(canvas.height+OFFSCREEN_OFFSET));
         }
-        if (fishies[i].x > canvas.width+60) {
-            fishies[i] = newFish(fishies[i].x % (canvas.width+60));
+        if (fishies[i].x > canvas.width+OFFSCREEN_OFFSET) {
+            fishies[i] = newFish(fishies[i].x%(canvas.width+OFFSCREEN_OFFSET));
         }
     }
 
@@ -133,7 +135,7 @@ function setCanvasDimensions(canvas) {
     canvas.width = window.innerWidth
     canvas.height = Math.max(
         window.innerHeight,
-        mainBody.scrollHeight + 350
+        mainBody.scrollHeight + 500
     );
     //console.log(window.getComputedStyle(mainBody).marginTop);
 }
@@ -141,7 +143,7 @@ function setCanvasDimensions(canvas) {
 function initialize() {
     setCanvasDimensions(canvas)
     fishies = [];
-    for (i=0; i<(canvas.width*canvas.height) * 0.0001; i++) {
+    for (i=0; i<(canvas.width*canvas.height) * 0.00005; i++) {
         fishies.push(newFish());
     }
 }
