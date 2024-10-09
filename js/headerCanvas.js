@@ -1,5 +1,12 @@
 window.addEventListener('DOMContentLoaded', initialize);
-window.addEventListener('resize', initialize)
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer)
+    resizeTimer = setTimeout(() => {
+        initialize();
+    }, 200);
+})
+
+let resizeTimer;
 
 const canvas = document.getElementById('headerCanvas');
 const mainBody = document.getElementById("main");
@@ -9,7 +16,7 @@ context.lineWidth = 3;
 
 let previousTime_ms;
 
-let fishies = []
+let fishies = [];
 
 class Fish {
     static SPEED = 200;
@@ -50,7 +57,7 @@ class Fish {
         if (this.alphaRadians > Math.PI*2) {
             this.alphaRadians -= Math.PI*2;
         }
-        console.log(fishies.length);
+        //console.log(fishies.length);
     }
 
     draw(context) {

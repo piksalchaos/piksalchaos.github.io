@@ -64,7 +64,10 @@ a {
     background-color: var(--rose-pine-base);
     max-width: 850px;
     margin: 200px auto 0 auto;
-    padding: 20px
+    padding: 20px;
+    border-style:double;
+    border-color: var(--rose-pine-highlighthigh);
+    border-width: 14px;
 }
 
 .hoverlink {
@@ -193,7 +196,7 @@ footer span {
 }
 
 @media screen and (max-width: 850px) {
-    header #greeting {
+    /*header #greeting {
         width: 360px;
         height: 36px;
         left: calc(50% - 180px);
@@ -206,6 +209,10 @@ footer span {
 
     header #littleme {
         right: calc(50% - 80px);
+    }
+    */
+    header #littleme {
+        display: none;
     }
 }
 
@@ -234,13 +241,14 @@ footer span {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 10px;
+        margin-top: 30px;
     }
     #projects p {
         margin-left: 40px;
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 380px) {
     #biomiddash {
         display: none
     }

@@ -10,7 +10,7 @@ function startAnimation() {
     startTime = performance.now();
     animateBounce();
     
-    console.log(`sfx/${Math.floor(Math.random()*21)}.mp3`);
+    //console.log(`sfx/${Math.floor(Math.random()*21)}.mp3`);
     const sound = new Audio(`sfx/${Math.floor(Math.random()*28.99)}.mp3`);
     sound.play();
 }
