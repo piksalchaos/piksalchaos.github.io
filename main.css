@@ -53,6 +53,37 @@ a {
     color: inherit;
 }
 
+#aboutme {
+    margin-bottom: 100px;
+    padding: 40px;
+    text-align: left;
+
+    h1 {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    img {
+        width:60%;
+        margin: 20px;
+    }
+
+    .hoverlink {
+        color: var(--rose-pine-foam);
+    }
+    p {
+        margin-bottom: 20px;
+    }
+    ol {
+        margin: 60px;
+    }
+}
+
+#bruhface {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+
 #headerCanvas {
     background: black;
     position: absolute;
@@ -60,7 +91,7 @@ a {
     top: 0;
     z-index: -1;
 }
-#main {
+.main {
     background-color: var(--rose-pine-base);
     max-width: 850px;
     margin: 200px auto 0 auto;

@@ -9,7 +9,7 @@ window.addEventListener('resize', () => {
 let resizeTimer;
 
 const canvas = document.getElementById('headerCanvas');
-const mainBody = document.getElementById("main");
+const mainBody = document.getElementsByClassName("main")[0];
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
