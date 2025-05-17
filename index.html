@@ -28,54 +28,59 @@ task list
 
 <body>
   <canvas id="headerCanvas"></canvas>
-
+  <!--
   <header>
     <div id="littleme" title="Loud sound warning: click to squish me"></div>
     <script src="js/littleme.js" type="text/javascript"></script>
   </header>
+  -->
 
+ 
   <div class="main">
-    <nav id="links">
-      <a href="https://www.youtube.com/@piksalchaos" class="hoverlink" style="color:var(--rose-pine-love)">
-        youtube
-      </a>
-      <span>&middot;</span>
-      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink" style="color:var(--rose-pine-rose)">
-        instagram
-      </a>
-      <span>&middot;</span>
-      <a href="https://piksal.itch.io/" class="hoverlink" style="color:var(--rose-pine-love)">
-        itch.io
-      </a>
-      <span>&middot;</span>
-      <a href="https://github.com/piksalchaos" class="hoverlink" style="color:var(--rose-pine-foam)">
-        github
-      </a>
-      <span>&middot;</span>
-      <a href="https://www.linkedin.com/in/justin-le-800854321/" class="hoverlink" style="color:var(--rose-pine-pine)">
-        linkedin
-      </a>
-    </nav>
-
-    <nav id="links">
-      <a class="hoverlink" style="color:var(--rose-pine-rose)" href="about.html">about me</a>
-      <span> &middot; </span>
-      <a class="hoverlink" style="color:var(--rose-pine-foam)" href="blogDNE.html">blog</a>
-    </nav>
 
     <div id="shortbio">
-      <img id="stoopidcat" alt='stoopid cat image here' width="320px" height="320px">
+      <img id="stoopidcat" alt='stoopid cat image here' width="300px" height="300px">
       <div class="text">
+        <nav id="sociallinks">
+          <a href="https://www.youtube.com/@piksalchaos" class="hoverlink" style="color:var(--rose-pine-love)">
+            <img src="images/icons/youtube.png" alt="youtube">
+          </a>
+          <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink" style="color:var(--rose-pine-rose)">
+            <img src="images/icons/instagram.png" alt="instagram">
+          </a>
+          <a href="https://piksal.itch.io/" class="hoverlink" style="color:var(--rose-pine-love)">
+            <img src="images/icons/itch.png" alt="itch.io">
+          </a>
+          <a href="https://github.com/piksalchaos" class="hoverlink" style="color:var(--rose-pine-foam)">
+            <img src="images/icons/github.png" alt="github">
+          </a>
+          <a href="https://www.linkedin.com/in/justin-le-800854321/" class="hoverlink" style="color:var(--rose-pine-pine)">
+            <img src="images/icons/linkedin.png" alt="linkedin">
+          </a>
+        </nav>
+          
         <h1>Hi, I'm Justin Le!</h1>
         <p>
           Unemployed animator
           and game developer
         </p>
+        
       </div>
     </div>
+    <nav id="coollinks">
+      <a class="hoverlink" style="color:var(--rose-pine-rose)" href="about.html">about me</a>
+      <span> &middot; </span>
+      <a class="hoverlink" style="color:var(--rose-pine-foam)" href="blogDNE.html">blog</a>
+    </nav>
+  </div>
 
+  <div class="main">
     <h1>Projects</h1>
     <div id="projects">
+      <a href="https://juice.hackclub.com/games?hackerId=recoMkC8KrWoN3zHo" class="hoverlink">
+        <img src="images/thumbnails/spadooshka.png" alt="Spadooshka" width="300px">
+        <p><span>Spadooshka</span><br> 1v1 first-person shooter focused on platforming - made for Hack Club's <b>Juice</b> game jam </p>
+      </a>
       <a href="https://devpost.com/software/chatgpme" class="hoverlink">
         <img src="images/thumbnails/chatgpme.png" alt="ChatGPMe" width="300px">
         <p><span>ChatGPMe</span><br>A game that won <b>Hack the North 2024</b> where <em>you</em> are the LLM answering peoples' prompts</p>
@@ -86,6 +91,7 @@ task list
       </a>
     </div>
   </div>
+  
   <!--
   <footer>
     <span></span>

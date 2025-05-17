@@ -20,9 +20,9 @@ let previousTime_ms;
 let fishies = [];
 
 class Fish {
-    static SPEED = 200;
+    static SPEED = 150;
     static ALPHA_SPEED = 0.5;
-    static WIGGLE_SPEED = 6;
+    static WIGGLE_SPEED = 5;
 
     static WIDTH_RATIO = 0.15;
     static BODY_RATIO = 0.4;

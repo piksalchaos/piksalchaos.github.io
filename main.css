@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
@@ -22,30 +20,6 @@
     --rose-pine-highlighthigh: #524f67;
 }
 
-@font-face {
-    font-family: 'rainyhearts';
-    src: url('fonts/rainyhearts.woff2') format('woff2'),
-         url('fonts/rainyhearts.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Cascadia Mono";
-    src: url("fonts/CascadiaMono.woff2") format('woff2'),
-         url("fonts/CascadiaMono.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Cascadia Mono";
-    src: url("fonts/CascadiaMonoItalic.woff2") format('woff2'),
-         url("fonts/CascadiaMonoItalic.ttf") format("truetype");
-    font-weight: 400;
-    font-style: italic;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -53,7 +27,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--rose-pine-base);
     color: var(--rose-pine-text);
     margin: auto;
     font-family: "Poppins", sans-serif;
@@ -67,7 +41,6 @@ h1 {
     font-size: 3rem;
     font-weight: 700;
     color: var(--rose-pine-iris);
-    text-align: left;
     margin: auto 30px;
 }
 
@@ -107,16 +80,16 @@ a {
 }
 
 #headerCanvas {
-    background: black;
+    background: var(--rose-pine-base);
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
 }
 .main {
-    background-color: var(--rose-pine-base);
+    background-color: var(--rose-pine-surface);
     max-width: 850px;
-    margin: 200px auto 0 auto;
+    margin: 30px auto 0 auto;
     padding: 25px;
     border-style:solid;
     border-color: var(--rose-pine-highlighthigh);
@@ -151,13 +124,13 @@ header #littleme {
     background-size: 100% 100%;
     position:absolute;
     top: -37px;
-    right: calc(50% - 420px);
+    left: calc(50% - 100px);
     margin-left: 30px;
 }
 
 #shortbio {
     max-width: 800px;
-    margin: 30px 30px;
+    margin: 0px 30px 30px 30px;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -170,12 +143,29 @@ header #littleme {
     text-align: right;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 20px;
 }
 #shortbio p {
     max-width: 400px;
     text-align: right;
-    margin-top: 20px;
     margin-left: auto;
+}
+
+#sociallinks {
+    margin-left: auto;
+}
+
+#sociallinks img {
+    width: 50px;
+    margin: 10px 10px 0px 10px;
+}
+
+#coollinks {
+    font-size: 1.75rem;
+}
+
+#coollinks a {
+    margin: 0 15px;
 }
 
 #biolinks {
@@ -188,11 +178,6 @@ header #littleme {
     max-width: 800px;
     margin: 0 auto;
     font-size: 2rem;
-}
-
-#links {
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 
 #projects a {
