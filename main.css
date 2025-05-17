@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --rose-pine-base: #191724;        /* Base Background */
     --rose-pine-surface: #1f1d2e;     /* Surface Background */
@@ -26,6 +30,22 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url("fonts/CascadiaMono.woff2") format('woff2'),
+         url("fonts/CascadiaMono.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cascadia Mono";
+    src: url("fonts/CascadiaMonoItalic.woff2") format('woff2'),
+         url("fonts/CascadiaMonoItalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -36,17 +56,19 @@ body {
     background-color: black;
     color: var(--rose-pine-text);
     margin: auto;
-    font-family: 'rainyhearts', serif;
-    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
     max-width: 100%;
     overflow-x: hidden;
     text-align: center;
 }
 
 h1 {
-    font-weight: bold;
     font-size: 3rem;
+    font-weight: 700;
     color: var(--rose-pine-iris);
+    text-align: left;
+    margin: auto 30px;
 }
 
 a {
@@ -95,10 +117,11 @@ a {
     background-color: var(--rose-pine-base);
     max-width: 850px;
     margin: 200px auto 0 auto;
-    padding: 20px;
-    border-style:double;
+    padding: 25px;
+    border-style:solid;
     border-color: var(--rose-pine-highlighthigh);
-    border-width: 14px;
+    border-width: 3px;
+    border-radius: 20px;
 }
 
 .hoverlink {
@@ -115,9 +138,8 @@ a {
 }
 
 .hoverlink:hover {
-    top: -6px;
+    top: -0.25rem;
 }
-
 .hoverlink:hover img {
     transform: scale(1.12);
 }
@@ -135,25 +157,31 @@ header #littleme {
 
 #shortbio {
     max-width: 800px;
-    margin: 15px auto;
-    font-size: 3rem;
+    margin: 30px 30px;
+    font-size: 2rem;
     display: flex;
     align-items: center;
 }
 
-#shortbio p {
-    text-align: left;
+#shortbio .text {
+    margin-left: auto;
 }
-
-#shortbio img {
-    margin-right: 30px;
+#shortbio h1 {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+#shortbio p {
+    max-width: 400px;
+    text-align: right;
+    margin-top: 20px;
+    margin-left: auto;
 }
 
 #biolinks {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    padding-top: 20px;
 }
 
 #projects {
@@ -163,7 +191,8 @@ header #littleme {
 }
 
 #links {
-    margin-bottom: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #projects a {
@@ -176,17 +205,21 @@ header #littleme {
 #projects img {
     margin: 0 30px;
     border-style: solid;
-    border-width: 4px;
-    border-color: var(--rose-pine-muted);
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: var(--rose-pine-highlighthigh);
 }
 
 #projects p {
     margin-right: 30px;
     color: var(--rose-pine-muted);
+    font-size: 1.25rem;
+    text-align: left;
 }
 #projects p span {
     color: var(--rose-pine-text);
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 #nutshells {
@@ -254,9 +287,6 @@ footer span {
     #shortbio img {
         margin-right: auto;
     }
-    #shortbio p {
-        text-align: center
-    }
 }
 
 @media screen and (max-width: 660px) {
@@ -280,10 +310,19 @@ footer span {
 }
 
 @media screen and (max-width: 380px) {
+    /*
     #biomiddash {
         display: none
     }
     #biolinks a {
+        display: block;
+        text-align: left;
+    }
+    */
+    #links span {
+        display: none;
+    }
+    #links a {
         display: block;
         text-align: left;
     }

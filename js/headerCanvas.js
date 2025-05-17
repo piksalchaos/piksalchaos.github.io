@@ -143,7 +143,7 @@ function setCanvasDimensions(canvas) {
 function initialize() {
     setCanvasDimensions(canvas)
     fishies = [];
-    for (i=0; i<(canvas.width*canvas.height) * 0.00005; i++) {
+    for (i=0; i<(canvas.width*canvas.height) * 0.00006; i++) {
         fishies.push(newFish());
     }
 }

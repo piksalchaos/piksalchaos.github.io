@@ -17,7 +17,14 @@
   <link rel="stylesheet" href="main.css">
 
   <script src="js/headerCanvas.js" type="text/javascript" defer></script>
+  <script src="js/stoopidcat.js" type="text/javascript" defer></script>
 </head>
+
+<!--
+task list
+- add license
+- add contact info
+-->
 
 <body>
   <canvas id="headerCanvas"></canvas>
@@ -28,23 +35,6 @@
   </header>
 
   <div class="main">
-    <h1> Hello, I'm Justin Le! </h1>
-
-    <div id="shortbio">
-      <img src="images/me.gif" alt='doodle of me!"' width="256px">
-      <div>
-        <p>
-          I like to do  animation and  game development
-          in my free time.
-        </p>
-        <div id="biolinks">
-          <a class="hoverlink" style="color:var(--rose-pine-rose)" href="about.html">About Me</a>
-          <span id="biomiddash"> - </span>
-          <a class="hoverlink" style="color:var(--rose-pine-foam)" href="blogDNE.html">Blog</a>
-        </div>
-      </div>
-    </div>
-
     <nav id="links">
       <a href="https://www.youtube.com/@piksalchaos" class="hoverlink" style="color:var(--rose-pine-love)">
         youtube
@@ -66,6 +56,24 @@
         linkedin
       </a>
     </nav>
+
+    <nav id="links">
+      <a class="hoverlink" style="color:var(--rose-pine-rose)" href="about.html">about me</a>
+      <span> &middot; </span>
+      <a class="hoverlink" style="color:var(--rose-pine-foam)" href="blogDNE.html">blog</a>
+    </nav>
+
+    <div id="shortbio">
+      <img id="stoopidcat" alt='stoopid cat image here' width="320px" height="320px">
+      <div class="text">
+        <h1>Hi, I'm Justin Le!</h1>
+        <p>
+          Unemployed animator
+          and game developer
+        </p>
+      </div>
+    </div>
+
     <h1>Projects</h1>
     <div id="projects">
       <a href="https://devpost.com/software/chatgpme" class="hoverlink">
