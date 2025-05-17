@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
     --rose-pine-base: #191724;        /* Base Background */
     --rose-pine-surface: #1f1d2e;     /* Surface Background */
@@ -18,14 +20,6 @@
     --rose-pine-highlighthigh: #524f67;
 }
 
-@font-face {
-    font-family: 'rainyhearts';
-    src: url('fonts/rainyhearts.woff2') format('woff2'),
-         url('fonts/rainyhearts.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -33,20 +27,21 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--rose-pine-base);
     color: var(--rose-pine-text);
     margin: auto;
-    font-family: 'rainyhearts', serif;
-    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
     max-width: 100%;
     overflow-x: hidden;
     text-align: center;
 }
 
 h1 {
-    font-weight: bold;
     font-size: 3rem;
+    font-weight: 700;
     color: var(--rose-pine-iris);
+    margin: auto 30px;
 }
 
 a {
@@ -79,26 +74,22 @@ a {
     }
 }
 
-#bruhface {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 500;
-}
-
 #headerCanvas {
-    background: black;
-    position: absolute;
+    background: var(--rose-pine-base);
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
 }
 .main {
-    background-color: var(--rose-pine-base);
+    background-color: var(--rose-pine-surface);
     max-width: 850px;
-    margin: 200px auto 0 auto;
-    padding: 20px;
-    border-style:double;
+    margin: 30px auto 0 auto;
+    padding: 25px;
+    border-style:solid;
     border-color: var(--rose-pine-highlighthigh);
-    border-width: 14px;
+    border-width: 3px;
+    border-radius: 20px;
 }
 
 .hoverlink {
@@ -115,9 +106,8 @@ a {
 }
 
 .hoverlink:hover {
-    top: -6px;
+    top: -0.25rem;
 }
-
 .hoverlink:hover img {
     transform: scale(1.12);
 }
@@ -129,41 +119,60 @@ header #littleme {
     background-size: 100% 100%;
     position:absolute;
     top: -37px;
-    right: calc(50% - 420px);
+    left: calc(50% - 100px);
     margin-left: 30px;
 }
 
 #shortbio {
     max-width: 800px;
-    margin: 15px auto;
-    font-size: 3rem;
+    margin: 0px 30px 10px 30px;
+    font-size: 2rem;
     display: flex;
     align-items: center;
 }
 
+#shortbio .text {
+    margin-left: auto;
+}
+#shortbio h1 {
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
 #shortbio p {
-    text-align: left;
+    max-width: 320px;
+    text-align: right;
+    margin-left: auto;
 }
 
-#shortbio img {
-    margin-right: 30px;
+#sociallinks {
+    margin-left: auto;
+    margin-top: 40px;
+}
+
+#sociallinks img {
+    width: 50px;
+    margin: 10px 10px 0px 10px;
+}
+
+#coollinks {
+    font-size: 1.75rem;
+}
+
+#coollinks a {
+    margin: 0 15px;
 }
 
 #biolinks {
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    padding-top: 20px;
 }
 
 #projects {
     max-width: 800px;
     margin: 0 auto;
     font-size: 2rem;
-}
-
-#links {
-    margin-bottom: 45px;
 }
 
 #projects a {
@@ -176,17 +185,21 @@ header #littleme {
 #projects img {
     margin: 0 30px;
     border-style: solid;
-    border-width: 4px;
-    border-color: var(--rose-pine-muted);
+    border-width: 3px;
+    border-radius: 10px;
+    border-color: var(--rose-pine-highlighthigh);
 }
 
 #projects p {
     margin-right: 30px;
     color: var(--rose-pine-muted);
+    font-size: 1.25rem;
+    text-align: left;
 }
 #projects p span {
     color: var(--rose-pine-text);
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 #nutshells {
@@ -208,6 +221,12 @@ header #littleme {
     margin-bottom: 20px;
 }
 
+.prettyImage {
+    border: var(--rose-pine-highlighthigh);
+    border-style: solid;
+    border-radius: 10px;
+}
+
 footer {
     margin-top: 200px; /*temporary */
     padding-top: 15px;
@@ -226,36 +245,20 @@ footer span {
     margin-right: 10px;
 }
 
-@media screen and (max-width: 850px) {
-    /*header #greeting {
-        width: 360px;
-        height: 36px;
-        left: calc(50% - 180px);
-        top: 10px;
-    }
-    
-    #main {
-        padding-top: 45px;
-    }
-
-    header #littleme {
-        right: calc(50% - 80px);
-    }
-    */
-    header #littleme {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 810px) {
     #shortbio {
         display: block;
-    }
-    #shortbio img {
-        margin-right: auto;
-    }
-    #shortbio p {
-        text-align: center
+        img {
+            margin-right: auto;
+        }
+        p {
+            text-align: center;
+            margin-right: auto;
+            max-width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
     }
 }
 
@@ -276,14 +279,24 @@ footer span {
     }
     #projects p {
         margin-left: 40px;
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 380px) {
+    /*
     #biomiddash {
         display: none
     }
     #biolinks a {
+        display: block;
+        text-align: left;
+    }
+    */
+    #links span {
+        display: none;
+    }
+    #links a {
         display: block;
         text-align: left;
     }

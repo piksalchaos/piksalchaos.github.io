@@ -1,6 +1,10 @@
-const littleme = document.getElementById("littleme");
+const stoopidCat = document.getElementById("stoopidcat");
+window.addEventListener('DOMContentLoaded', changeImage);
+stoopidCat.addEventListener('click', startAnimation);
 
-littleme.addEventListener('click', startAnimation)
+function changeImage() {
+    stoopidCat.src = `images/cat doodles/${Math.floor(Math.random()*25.99)}.png`;
+}
 
 const duration_ms = 1500;
 let startTime;
@@ -8,26 +12,24 @@ let bounceFactor;
 
 function startAnimation() {
     startTime = performance.now();
-    animateBounce();
+    animateJiggle();
     
     //console.log(`sfx/${Math.floor(Math.random()*21)}.mp3`);
-    const sound = new Audio(`sfx/${Math.floor(Math.random()*28.99)}.mp3`);
+    changeImage();
+    const sound = new Audio(`sfx/${Math.floor(Math.random()*26.99)}.mp3`);
     sound.play();
 }
 
-function animateBounce() {
+function animateJiggle() {
     let timeElapsed = performance.now() - startTime;
     bounceFactor = easeOutElastic(timeElapsed/duration_ms);
 
     if (timeElapsed < duration_ms) {
-        requestAnimationFrame(animateBounce);
+        requestAnimationFrame(animateJiggle);
     } else {
         timeElapsed = duration_ms;
     }
-    littleme.style.width = `${(1-bounceFactor)*240+bounceFactor*160}px`;
-    littleme.style.height = `${(1-bounceFactor)*160+bounceFactor*320}px`;
-    littleme.style.top = `${(1-bounceFactor)*80+bounceFactor*(-37)}px`;
-    littleme.style.right = `calc(50% - ${(1-bounceFactor)*460+bounceFactor*420}px)`;
+    stoopidCat.style.transform = `scale(calc(${bounceFactor} * 0.3 + 0.7))`;
 }
 
 function easeOutElastic(x) {

@@ -9,7 +9,6 @@ window.addEventListener('resize', () => {
 let resizeTimer;
 
 const canvas = document.getElementById('headerCanvas');
-const mainBody = document.getElementsByClassName("main")[0];
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
@@ -20,9 +19,9 @@ let previousTime_ms;
 let fishies = [];
 
 class Fish {
-    static SPEED = 200;
+    static SPEED = 150;
     static ALPHA_SPEED = 0.5;
-    static WIGGLE_SPEED = 6;
+    static WIGGLE_SPEED = 5;
 
     static WIDTH_RATIO = 0.15;
     static BODY_RATIO = 0.4;
@@ -133,17 +132,13 @@ function draw() {
 
 function setCanvasDimensions(canvas) {
     canvas.width = window.innerWidth
-    canvas.height = Math.max(
-        window.innerHeight,
-        mainBody.scrollHeight + 500
-    );
-    //console.log(window.getComputedStyle(mainBody).marginTop);
+    canvas.height = window.innerHeight;
 }
 
 function initialize() {
     setCanvasDimensions(canvas)
     fishies = [];
-    for (i=0; i<(canvas.width*canvas.height) * 0.00005; i++) {
+    for (i=0; i<(canvas.width*canvas.height) * 0.00006; i++) {
         fishies.push(newFish());
     }
 }

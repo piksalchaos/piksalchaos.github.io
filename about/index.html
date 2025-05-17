@@ -7,53 +7,42 @@
 	<meta itemprop="description" content="I'm Justin Le!">
 	<meta itemprop="image" content="/images/silly/hello yalls.png">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
 
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../main.css">
+  <script src="../js/headerCanvas.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-
-  <header>
-    <div id="littleme" title="Loud sound warning: click to squish me"></div>
-    <script src="js/littleme.js" type="text/javascript"></script>
-  </header>
-
+  <canvas id="headerCanvas"></canvas>
   <div class="main" id="aboutme">
-    <a class="hoverlink" href="index.html">
+    <a class="hoverlink" href="/">
       < back to main page
     </a>
     <h1>who am i?</h1>
     <p>
       My name is Justin Le (he/they). I'm known as Piksal, PiksalChaos, or Pixi online.
-      Don't call me any of those in person though or I'll look at you like <span id="bruhface">(ಠ_ಠ)</span>
     </p>
-    <p>I'm a high school junior (assuming that I don't
-      forget to update this page) with a bit of a passion for art and computer
+    <p>I'm a high school junior with a passion for art and computer
       science. I want to make things that are expressive and fun!
-    </p>
-    <p>
-      This website is mostly just a playground for me to experiment.
-      Maybe I'll make a professional website, but that's a job for future me.
     </p>
 
     <h1>what do i do?</h1>
     <p>
       My two main skills and passions are <b>game development</b> and <b>animation</b>.
-      I'm always learning something new though, and I'm currently interested in
-      getting into webdev and UI/UX.
+      I'm always learning something new though! Right now, I'm trying to get better
+      at web development.
     </p>
 
-    <h1>what do i use</h1>
+    <h1>things i use</h1>
     <p>
-      I use <b>Godot</b> for game development as of currently, but in the past
-      I've had a lot of experience in <b>LOVE2D</b>. <b>Phaser JS</b> is a lot
-      of fun too!
+      My main game engine is <b>Godot</b>, but I've also used <b>LÖVE</b> and Lua a lot
+      in the past. <b>Phaser</b> is a lot of fun too.
     </p>
     <p>
       When it comes to animation, I'm most experienced with <b>Adobe Animate</b>
@@ -69,7 +58,7 @@
       to build Aseprite.
     </p>
     <p>
-      For video game music, I use <b>LMMS</b>.
+      For video game music, I'm most experienced with <b>LMMS</b>.
     </p>
     <p>
 
@@ -77,12 +66,13 @@
     <ul>
       <li>Crocheting small things</li>
       <li>Origami (it' my childhood hobby ✨)</li>
-      <li>Papercrafts (mostly Minecraft, but sometimes complex designs)</li>
+      <li>Papercrafts - mostly Minecraft, but sometimes complex designs</li>
       <li>Playing indie games - <em>Oneshot</em> is my favorite right now</li>
       <li>Making <a href="https://www.desmos.com/3d/2lcmtj5epn">monstrosities</a> in Desmos</li>
       <li>Linux ricing (I don't go outside)</li>
     </ul>
-    <img src="images/origamicubes.webp" alt="My origami fujimoto cube collection">
+    <img src="origamicubes.webp" class="prettyImage" alt="My origami fujimoto cube collection"
+    title="This is actually an old photo. My collection is even bigger now.">
     <p>
       I like to make these origami
       <a href="https://www.youtube.com/watch?v=Y8ljs9s9yqI">fujimoto cubes</a>
@@ -93,8 +83,7 @@
       <li>My favorite code theme is <b>Rose Pine</b>. It's also the theme of this
       website!</li>
       <li>My favorite font to code in is <b>Cascadia Code</b></li>
-      <li>This website uses the <a href="https://www.dafont.com/rainyhearts.font">Rainy Hearts</a> font by Camellina.</li>
-      <li>I use Fedora Linux + Hyprland btw btw</li>
+      <li>I use Fedora Linux btw</li>
     </ul>
   </div>
   <!--
