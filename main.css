@@ -76,7 +76,7 @@ a {
 
 #headerCanvas {
     background: var(--rose-pine-base);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -1;
@@ -125,7 +125,7 @@ header #littleme {
 
 #shortbio {
     max-width: 800px;
-    margin: 0px 30px 30px 30px;
+    margin: 0px 30px 10px 30px;
     font-size: 2rem;
     display: flex;
     align-items: center;
@@ -138,16 +138,16 @@ header #littleme {
     text-align: right;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
 }
 #shortbio p {
-    max-width: 300px;
+    max-width: 320px;
     text-align: right;
     margin-left: auto;
 }
 
 #sociallinks {
     margin-left: auto;
+    margin-top: 40px;
 }
 
 #sociallinks img {
@@ -245,33 +245,20 @@ footer span {
     margin-right: 10px;
 }
 
-@media screen and (max-width: 850px) {
-    /*header #greeting {
-        width: 360px;
-        height: 36px;
-        left: calc(50% - 180px);
-        top: 10px;
-    }
-    
-    #main {
-        padding-top: 45px;
-    }
-
-    header #littleme {
-        right: calc(50% - 80px);
-    }
-    */
-    header #littleme {
-        display: none;
-    }
-}
-
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 810px) {
     #shortbio {
         display: block;
-    }
-    #shortbio img {
-        margin-right: auto;
+        img {
+            margin-right: auto;
+        }
+        p {
+            text-align: center;
+            margin-right: auto;
+            max-width: 100%;
+        }
+        h1 {
+            text-align: center;
+        }
     }
 }
 
@@ -292,6 +279,7 @@ footer span {
     }
     #projects p {
         margin-left: 40px;
+        text-align: center;
     }
 }
 

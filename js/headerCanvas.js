@@ -9,7 +9,6 @@ window.addEventListener('resize', () => {
 let resizeTimer;
 
 const canvas = document.getElementById('headerCanvas');
-const mainBody = document.getElementsByClassName("main")[0];
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
@@ -133,11 +132,7 @@ function draw() {
 
 function setCanvasDimensions(canvas) {
     canvas.width = window.innerWidth
-    canvas.height = Math.max(
-        window.innerHeight,
-        mainBody.scrollHeight + 500
-    );
-    //console.log(window.getComputedStyle(mainBody).marginTop);
+    canvas.height = window.innerHeight;
 }
 
 function initialize() {
