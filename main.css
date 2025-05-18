@@ -49,7 +49,6 @@ a {
 }
 
 #aboutme {
-    margin-bottom: 100px;
     padding: 40px;
     text-align: left;
 
@@ -84,7 +83,7 @@ a {
 .main {
     background-color: var(--rose-pine-surface);
     max-width: 850px;
-    margin: 30px auto 0 auto;
+    margin: 60px auto;
     padding: 25px;
     border-style:solid;
     border-color: var(--rose-pine-highlighthigh);
