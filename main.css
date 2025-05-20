@@ -58,8 +58,9 @@ a {
     }
 
     img {
-        width:60%;
-        margin: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hoverlink {
@@ -224,6 +225,8 @@ header #littleme {
     border: var(--rose-pine-highlighthigh);
     border-style: solid;
     border-radius: 10px;
+    width:60%;
+    margin: 20px;
 }
 
 footer {
