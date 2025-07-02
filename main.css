@@ -93,7 +93,13 @@ a {
     font-optical-sizing: auto;
     font-size: 2.5rem;
     font-style: normal;
+    margin-bottom: 0;
     color: #8B7EC9;
+}
+
+#other-names {
+    margin-top: 0;
+    font-size: 1rem;
 }
 #projects-heading {
     font-family: "Jetbrains Mono", monospace;
