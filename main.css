@@ -175,6 +175,12 @@ a {
     }
 }
 
+@media screen and (max-width: 850px) {
+    #canvasBackground {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 750px) {
     #silly-piksal {
         float:none;
