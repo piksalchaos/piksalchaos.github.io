@@ -8,11 +8,11 @@ window.addEventListener('resize', () => {
 
 let resizeTimer;
 
-const canvas = document.getElementById('headerCanvas');
+const canvas = document.getElementById('canvasBackground');
 
 const context = canvas.getContext('2d');
 context.lineWidth = 3;
-const OFFSCREEN_OFFSET = 90
+const OFFSCREEN_OFFSET = 90;
 
 let previousTime_ms;
 
@@ -38,9 +38,8 @@ class Fish {
         this.angle = Math.PI*0.25 + (Math.random()-0.9)*0.25;
         this.wiggleRadians = Math.random() * Math.PI*2;
 
-        const getRandomColorValue = () => (Math.random() + 0.7) * 255;
         this.alphaRadians = Math.random() * Math.PI*2;
-        this.color = [getRandomColorValue(), getRandomColorValue(), getRandomColorValue()];
+        this.hue = Math.random() * 360;
     }
 
     update(dt) {
@@ -63,9 +62,8 @@ class Fish {
 
     draw(context) {
         context.save();
-
-        const c = this.color
-        context.fillStyle = `rgb(${c[0]}, ${c[1]}, ${c[2]}, ${this.getAlpha()})`;
+        const sl = canvas.classList.contains('light-mode') ? "80%" : "20%";
+        context.fillStyle = `hsla(${this.hue}, ${sl}, ${sl}, ${this.getAlpha()})`;
 
         context.translate(this.x, this.y);
         context.rotate(this.angle);
@@ -131,7 +129,7 @@ function draw() {
 }
 
 function setCanvasDimensions(canvas) {
-    canvas.width = window.innerWidth
+    canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
 
