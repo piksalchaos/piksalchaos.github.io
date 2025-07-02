@@ -12,6 +12,12 @@ body {
     height: 100%;
     overflow-x: hidden;
 }
+body.light-mode {
+    background: white;
+}
+body.dark-mode {
+    background: black;
+}
 
 a {
     color: inherit;
