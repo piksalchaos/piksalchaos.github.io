@@ -1,94 +1,107 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-    --rose-pine-base: #191724;        /* Base Background */
-    --rose-pine-surface: #1f1d2e;     /* Surface Background */
-    --rose-pine-overlay: #26233a;     /* Overlay Background */
-    --rose-pine-muted: #6e6a86; /* Muted Color (Gray) */
-    --rose-pine-subtle: #908caa;
-    
-    --rose-pine-pine: #31748f; /* Pine Color (Warm Yellow) */
-    --rose-pine-rose: #ebbcba;         /* Rose Color (Soft Lavender) */
-    --rose-pine-foam: #9ccfd8; /* Foam Color (Cool Light Blue) */
-    --rose-pine-love: #eb6f92;
-    --rose-pine-gold: #f6c177;
-    --rose-pine-iris: #c4a7e7;
-    
-    --rose-pine-text: #e0def4; /* Text Color (Soft Gray) */
-    --rose-pine-highlightlow: #21202e;
-    --rose-pine-highlightmed: #403d52;
-    --rose-pine-highlighthigh: #524f67;
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.dark-mode, .light-mode {
+    transition: filter 0.5s, background-color 0.5s, color 0.5s;
 }
 
 body {
-    background-color: var(--rose-pine-base);
-    color: var(--rose-pine-text);
-    margin: auto;
-    font-family: "Poppins", sans-serif;
-    font-size: 1.5rem;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.35rem;
     max-width: 100%;
+    height: 100%;
     overflow-x: hidden;
-    text-align: center;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    color: var(--rose-pine-iris);
-    margin: auto 30px;
 }
 
 a {
     color: inherit;
 }
 
-#aboutme {
-    padding: 40px;
-    text-align: left;
-
-    h1 {
-        text-align: center;
-        margin-top: 40px;
-    }
-
-    img {
-        width:60%;
-        margin: 20px;
-    }
-
-    .hoverlink {
-        color: var(--rose-pine-foam);
-    }
-    p {
-        margin-bottom: 20px;
-    }
-    ol {
-        margin: 60px;
-    }
+#theme-toggle-button {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    border-radius: 10px;
+    padding: 0 0.3rem;
+    margin: 0;
+}
+#theme-toggle-button.light-mode {
+    background-color: white;
+    color: black;
+}
+#theme-toggle-button.light-mode:hover {
+    background-color: black;
+    color: white;
+}
+#theme-toggle-button.dark-mode {
+    background-color: black;
+    color: white;
+}
+#theme-toggle-button.dark-mode:hover {
+    background-color: white;
+    color: black;
 }
 
-#headerCanvas {
-    background: var(--rose-pine-base);
+#silly-piksal {
+    float: right;
+    display: block;
+    max-width: 320px;
+    margin-top: 15px;
+}
+#silly-piksal.light-mode {
+    filter: brightness(60%);
+}
+#silly-piksal.dark-mode {
+    filter: brightness(100%);
+}
+
+#canvasBackground {
     position: fixed;
-    left: 0;
     top: 0;
     z-index: -1;
 }
-.main {
-    background-color: var(--rose-pine-surface);
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 25px;
-    border-style:solid;
-    border-color: var(--rose-pine-highlighthigh);
-    border-width: 3px;
-    border-radius: 20px;
+#canvasBackground.light-mode {
+    background: white;
+}
+#canvasBackground.dark-mode {
+    background: black;
+}
+
+#main {
+    max-width: 760px;
+    height: 100%;
+    margin:  auto;
+    padding: 10px 45px;
+}
+#main.light-mode {
+    background-color: white;
+    color: black;
+}
+#main.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#greeting-heading {
+    font-family: "Madimi One", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    font-style: normal;
+    color: #8B7EC9;
+}
+#projects-heading {
+    font-family: "Jetbrains Mono", monospace;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #7D81A8;
+}
+
+.colored-font.light-mode {
+    filter: brightness(100%) saturate(100%);
+}
+.colored-font.dark-mode {
+    filter: brightness(150%)  saturate(70%);
 }
 
 .hoverlink {
@@ -97,7 +110,6 @@ a {
     top: 0px;
     transition: top 0.1s ease-in-out;
 }
-
 
 .hoverlink img {
     transform: scale(1);
@@ -111,198 +123,101 @@ a {
     transform: scale(1.12);
 }
 
-header #littleme {
-    width: 160px;
-    height: 320px;
-    background: url('images/lilme.gif');
-    background-size: 100% 100%;
-    position:absolute;
-    top: -37px;
-    left: calc(50% - 100px);
-    margin-left: 30px;
+#links {
+    display: flex;
 }
-
-#shortbio {
-    max-width: 800px;
-    margin: 0px 30px 10px 30px;
-    font-size: 2rem;
+#iconlinks {
+    margin-top: 10px;
     display: flex;
     align-items: center;
+    img {
+        width: 40px;
+        margin-right: 24px;
+    }
 }
-
-#shortbio .text {
+#iconlinks .light-mode {
+    filter: brightness(0%);
+}
+#iconlinks .dark-mode {
+    filter: brightness(100%);
+}
+#textlinks {
+    display: flex;
+    align-items: center;
     margin-left: auto;
-}
-#shortbio h1 {
-    text-align: right;
-    margin-left: auto;
-    margin-right: auto;
-}
-#shortbio p {
-    max-width: 320px;
-    text-align: right;
-    margin-left: auto;
-}
-
-#sociallinks {
-    margin-left: auto;
-    margin-top: 40px;
-}
-
-#sociallinks img {
-    width: 50px;
-    margin: 10px 10px 0px 10px;
-}
-
-#coollinks {
-    font-size: 1.75rem;
-}
-
-#coollinks a {
-    margin: 0 15px;
-}
-
-#biolinks {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
+    span {
+        margin: 0 5px;
+    }
 }
 
 #projects {
     max-width: 800px;
     margin: 0 auto;
-    font-size: 2rem;
 }
 
 #projects a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0px;
+    margin:25px 0px;
+    img {
+        margin-right: 30px;
+        border-radius: 12px;
+        box-shadow: 2px 2px 8px rgb(126, 126, 126);
+    }
+    p {
+        text-align: left;
+    }
+    span {
+        font-family: "Madimi One", sans-serif;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
 }
 
-#projects img {
-    margin: 0 30px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-    border-color: var(--rose-pine-highlighthigh);
+@media screen and (max-width: 750px) {
+    #silly-piksal {
+        float:none;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 300px;
+    }
+    body {
+        text-align: center;
+    }
+    #main {
+        padding: 10px 6vw;
+    }
 }
-
-#projects p {
-    margin-right: 30px;
-    color: var(--rose-pine-muted);
-    font-size: 1.25rem;
-    text-align: left;
-}
-#projects p span {
-    color: var(--rose-pine-text);
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-#nutshells {
-    font-size: 2rem;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-}
-#nutshells article {
-    max-width: 800px; 
-    margin: 30px 10px;
-    padding: 0 30 px;
-    font-size: 1rem;
-    text-align: left;
-}
-
-#nutshells article p {
-    margin-bottom: 20px;
-}
-
-.prettyImage {
-    border: var(--rose-pine-highlighthigh);
-    border-style: solid;
-    border-radius: 10px;
-}
-
-footer {
-    margin-top: 200px; /*temporary */
-    padding-top: 15px;
-    background-color: black;
-    color: white;
-    text-align: right;
-    padding-right: 100px;
-}
-
-footer img {
-    width: 100px;
-}
-
-footer span {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-@media screen and (max-width: 810px) {
-    #shortbio {
+@media screen and (max-width: 670px) {
+    #links {
         display: block;
+        margin-bottom: 10px;
+    }
+    #iconlinks {
+        justify-content: space-between;
+        margin-bottom: 10px;
         img {
-            margin-right: auto;
+            max-width: 55px;
+            width: 10vw;
+            margin: 0;
         }
-        p {
-            text-align: center;
-            margin-right: auto;
-            max-width: 100%;
-        }
-        h1 {
-            text-align: center;
-        }
+    }
+    #textlinks {
+        justify-content: center;
     }
 }
 
 @media screen and (max-width: 660px) {
-    #nutshells {
-        margin-bottom: 30px;
-    }
-
     #projects a {
-        display: inline;
-    }
-    #projects img {
         display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px;
-        margin-top: 30px;
-    }
-    #projects p {
-        margin-left: 40px;
-        text-align: center;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    /*
-    #biomiddash {
-        display: none
-    }
-    #biolinks a {
-        display: block;
-        text-align: left;
-    }
-    */
-    #links span {
-        display: none;
-    }
-    #links a {
-        display: block;
-        text-align: left;
-    }
-}
-
-@media screen and (max-width: 330px) {
-    header #littleme {
-        background: none;
+        margin: 0;
+        img {
+            margin: 0 auto;
+            width: 80%;
+        }
+        p {
+            text-align: center;
+        }
     }
 }

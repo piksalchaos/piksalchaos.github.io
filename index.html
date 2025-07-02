@@ -16,8 +16,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="main.css">
 
-  <script src="js/headerCanvas.js" type="text/javascript" defer></script>
-  <script src="js/stoopidcat.js" type="text/javascript" defer></script>
+  <script src="js/canvasBackground.js" type="text/javascript" defer></script>
+  <script src="js/themeToggle.js" type="text/javascript" defer></script>
 </head>
 
 <!--
@@ -27,58 +27,75 @@ task list
 -->
 
 <body>
-  <canvas id="headerCanvas"></canvas>
-  <div class="main">
-
-    <div id="shortbio">
-      <img id="stoopidcat" title="⚠️ LOUD SOUND WARNING! Click to change the cat!" width="300px" height="300px">
-
-      <div class="text">
-        <h1>Hi, I'm Justin Le!</h1>
-        <p> Cool animator and game developer </p>
-        <nav id="sociallinks">
-          <a href="https://www.youtube.com/@piksalchaos" class="hoverlink" style="color:var(--rose-pine-love)">
-            <img src="images/icons/youtube.png" alt="youtube">
-          </a>
-          <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink" style="color:var(--rose-pine-rose)">
-            <img src="images/icons/instagram.png" alt="instagram">
-          </a>
-          <a href="https://piksal.itch.io/" class="hoverlink" style="color:var(--rose-pine-love)">
-            <img src="images/icons/itch.png" alt="itch.io">
-          </a>
-          <a href="https://github.com/piksalchaos" class="hoverlink" style="color:var(--rose-pine-foam)">
-            <img src="images/icons/github.png" alt="github">
-          </a>
-          <a href="https://www.linkedin.com/in/justin-le-800854321/" class="hoverlink" style="color:var(--rose-pine-pine)">
-            <img src="images/icons/linkedin.png" alt="linkedin">
-          </a>
-        </nav>
-          
-        
+  <canvas id="canvasBackground" class="light-mode"></canvas>
+  <div id="main" class="light-mode">
+    <nav id="links">
+      <div id="iconlinks">
+        <a href="https://www.youtube.com/@piksalchaos" class="hoverlink light-mode">
+        <img src="images/icons/youtube.png" alt="youtube">
+      </a>
+      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink light-mode">
+        <img src="images/icons/instagram.png" alt="instagram">
+      </a>
+      <a href="https://bsky.app/profile/piksal.bsky.social" class="hoverlink light-mode">
+        <img src="images/icons/bluesky.png" alt="bluesky">
+      </a>
+      <a href="https://piksal.itch.io/" class="hoverlink light-mode">
+        <img src="images/icons/itch.png" alt="itch.io">
+      </a>
+      <a href="https://github.com/piksalchaos" class="hoverlink light-mode">
+        <img src="images/icons/github.png" alt="github">
+      </a>
+      <a href="https://www.linkedin.com/in/justin-le-800854321/" class="hoverlink light-mode">
+        <img src="images/icons/linkedin.png" alt="linkedin">
+      </a>
       </div>
-    </div>
-
-    <nav id="coollinks">
-      <a class="hoverlink" style="color:var(--rose-pine-rose)" href="/about">about me</a>
-      <span> &middot; </span>
-      <a class="hoverlink" style="color:var(--rose-pine-foam)" href="blogDNE.html">blog</a>
+      <div id="textlinks">
+        <a href="/blogDNE.html" class="hoverlink" style="padding-right: 0.3rem;">
+          blog
+        </a>
+        <span>&middot;</span>
+        <button id="theme-toggle-button" class="light-mode">dark mode</button>
+      </div>
     </nav>
-  </div>
 
-  <div class="main">
-    <h1>Projects</h1>
+    <img id="silly-piksal" src="images/silly-piksal.gif" class="light-mode">
+    <h1 id="greeting-heading" class="colored-font light-mode">Hi, I'm Justin Le!</h1>
+    <div>
+      <p>
+        I'm a high school senior with a passion for art and computer science. I want to make things that are fun and expressive!
+    </p>
+    <p>
+      My two main skills and passions are game development and animation. I'm always learning something new though. (currently getting more into web development)
+    </p>
+    </div>
+    <h1 id="projects-heading" class="colored-font light-mode">Projects</h1>
     <div id="projects">
       <a href="https://juice.hackclub.com/games?hackerId=recoMkC8KrWoN3zHo" class="hoverlink">
         <img src="images/thumbnails/spadooshka.png" alt="Spadooshka" width="300px">
-        <p><span>Spadooshka</span><br> 1v1 first-person shooter focused on platforming - made for Hack Club's <b>Juice</b> game jam </p>
+        <p>
+          <span style="color: #A37FC3" class="colored-font light-mode">Spadooshka</span>
+          <br>
+          1v1 first-person shooter focused on platforming - made for Hack Club's
+          <b>Juice</b> game jam
+        </p>
       </a>
       <a href="https://devpost.com/software/chatgpme" class="hoverlink">
         <img src="images/thumbnails/chatgpme.png" alt="ChatGPMe" width="300px">
-        <p><span>ChatGPMe</span><br>A game that won <b>Hack the North 2024</b> where <em>you</em> are the LLM answering peoples' prompts</p>
+        <p>
+          <span style="color: #5ba187" class="colored-font light-mode">ChatGPMe</span>
+          <br>
+          A game that won <b>Hack the North 2024</b>
+          where <em>you</em> are the LLM answering peoples' prompts
+        </p>
       </a>
       <a href="https://piksal.itch.io/spacecat-adventure" class="hoverlink">
         <img src="images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure" width="300px">
-        <p><span>Spacecat Adventure</span><br>A short platformer and the first game I've ever released online</p>
+        <p>
+          <span style="color: #7092bb" class="colored-font light-mode">Spacecat Adventure</span>
+          <br>
+          A short platformer and the first game I've ever released online
+        </p>
       </a>
     </div>
   </div>
