@@ -1,129 +1,145 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
-<head>
-  <title>Justin Le</title>
+  <head>
+    <title>Justin Le</title>
 
-  <meta itemprop="name" content="Piksal's Website">
-	<meta itemprop="description" content="I'm Justin Le!">
+    <meta itemprop="name" content="Piksal's Website" />
+    <meta itemprop="description" content="I'm Justin Le!" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
 
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-  <script src="js/canvasBackground.js" type="text/javascript" defer></script>
-  <script src="js/themeToggle.js" type="text/javascript" defer></script>
-</head>
+  <body>
+    <div id="container">
+      <div id="info-card">
+        <p class="colored-font" style="color: #8b7ec9">Hi, I'm Justin Le!</p>
+        <p style="font-size: 0.75rem">(aka. Piksal)</p>
+        <img id="silly-piksal" src="images/silly-piksal.gif" alt="" />
 
-<!--
-task list
-- add license
-- add contact info
--->
-
-<body class="light-mode">
-  <canvas id="canvasBackground" class="light-mode"></canvas>
-  <div id="main" class="light-mode">
-    <nav id="links">
-      <div id="iconlinks">
-        <a href="https://www.youtube.com/@piksalchaos" class="hoverlink light-mode">
-        <img src="images/icons/youtube.png" alt="youtube">
-      </a>
-      <a href="https://www.instagram.com/piksal.chaos/" class="hoverlink light-mode">
-        <img src="images/icons/instagram.png" alt="instagram">
-      </a>
-      <a href="https://bsky.app/profile/piksal.bsky.social" class="hoverlink light-mode">
-        <img src="images/icons/bluesky.png" alt="bluesky">
-      </a>
-      <a href="https://piksal.itch.io/" class="hoverlink light-mode">
-        <img src="images/icons/itch.png" alt="itch.io">
-      </a>
-      <a href="https://github.com/piksalchaos" class="hoverlink light-mode">
-        <img src="images/icons/github.png" alt="github">
-      </a>
+        <nav id="big-links">
+          <a href="https://jnle.bearblog.dev/">blog</a>
+          <a>projects</a>
+          <a>art</a>
+          <a>portfolio</a>
+        </nav>
+        <nav id="icon-links">
+          <a href="https://www.youtube.com/@piksalchaos">
+            <img src="images/icons/youtube.png" alt="youtube" />
+          </a>
+          <a href="https://www.instagram.com/piksal.chaos/">
+            <img src="images/icons/instagram.png" alt="instagram" />
+          </a>
+          <a href="https://bsky.app/profile/piksal.bsky.social">
+            <img src="images/icons/bluesky.png" alt="bluesky" />
+          </a>
+          <a href="https://piksal.itch.io/">
+            <img src="images/icons/itch.png" alt="itch.io" />
+          </a>
+          <a href="https://github.com/piksalchaos">
+            <img src="images/icons/github.png" alt="github" />
+          </a>
+        </nav>
       </div>
-      <div id="textlinks">
-        <a href="/blogDNE.html" class="hoverlink" style="padding-right: 0.3rem;">
-          blog
+
+      <div id="projects">
+        <a href="https://https://piksal.itch.io/dreamskater">
+          <div class="project-container">
+            <div class="img-container">
+              <img src="images/thumbnails/DREAMSKATER.png" alt="DREAMSKATER" />
+            </div>
+            <div class="text-container">
+              <p style="color: #bb4f6c" class="colored-font">DREAMSKATER</p>
+              <p class="caption">
+                A precision puzzle game with only one button - made for
+                <b>GMTK Game Jam 2025</b>
+              </p>
+            </div>
+          </div>
         </a>
-        <span>&middot;</span>
-        <a href="/webrings/" class="hoverlink" style="padding: 0 0.3rem;">
-          webrings
+        <a href="https://pixipaint.jnle.dev">
+          <div class="project-container">
+            <div class="img-container">
+              <img src="images/thumbnails/pixipaint.png" alt="Pixipaint" />
+            </div>
+            <div class="text-container">
+              <p style="color: #635ab2" class="colored-font">Pixipaint</p>
+              <p class="caption">
+                Picross inspired puzzle game where you must color every tile
+                correctly to win
+              </p>
+            </div>
+          </div>
         </a>
-        <span>&middot;</span>
-        <button id="theme-toggle-button" class="light-mode">dark mode</button>
+        <a href="https://juice.hackclub.com/games?hackerId=recoMkC8KrWoN3zHo">
+          <div class="project-container">
+            <div class="img-container">
+              <img src="images/thumbnails/spadooshka.png" alt="Spadooshka" />
+            </div>
+            <div class="text-container">
+              <p style="color: #a37fc3" class="colored-font">Spadooshka</p>
+              <p class="caption">
+                1v1 first-person shooter focused on platforming - made for Hack
+                Club's
+                <b>Juice</b> game jam
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="https://devpost.com/software/chatgpme">
+          <div class="project-container">
+            <div class="img-container">
+              <img src="images/thumbnails/chatgpme.png" alt="ChatGPMe" />
+            </div>
+            <div class="text-container">
+              <p style="color: #5ba187" class="colored-font">ChatGPMe</p>
+              <p class="caption">
+                A game that won <b>Hack the North 2024</b> where
+                <em>you</em> are the LLM answering peoples' prompts
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="https://piksal.itch.io/spacecat-adventure">
+          <div class="project-container">
+            <div class="img-container">
+              <img
+                src="images/thumbnails/spacecatadventure.png"
+                alt="Spacecat Adventure"
+              />
+            </div>
+
+            <div class="text-container">
+              <p style="color: #7092bb" class="colored-font">
+                Spacecat Adventure
+              </p>
+              <p class="caption">
+                A short platformer and the first game I've ever released online
+              </p>
+            </div>
+          </div>
+        </a>
       </div>
-    </nav>
-
-    <img id="silly-piksal" src="images/silly-piksal.gif" class="light-mode">
-    <h1 id="greeting-heading" class="colored-font light-mode">Hi, I'm Justin Le!</h1>
-    <p id="other-names">(aka. Piksal)</p>
-    <div>
-      <p>
-          I'm a high school senior with a passion for art and computer science. I want to make things that are fun and expressive!
-      </p>
-      <p>
-        My two main skills and passions are game development and animation. I'm always learning something new though. (currently getting more into web development)
-      </p>
     </div>
-    <h1 id="projects-heading" class="colored-font light-mode">Projects</h1>
-    <div id="projects">
-      <a href="https://https://piksal.itch.io/dreamskater" class="hoverlink">
-        <img src="images/thumbnails/DREAMSKATER.png" alt="DREAMSKATER" width="300px">
-        <p>
-          <span style="color: #bb4f6c" class="colored-font light-mode">DREAMSKATER</span>
-          <br>
-          A precision puzzle game with only one button - made for <b>GMTK Game Jam 2025</b>
-        </p>
-      </a>
-      <a href="https://pixipaint.jnle.dev" class="hoverlink">
-        <img src="images/thumbnails/pixipaint.png" alt="Pixipaint" width="300px">
-        <p>
-          <span style="color: #635ab2" class="colored-font light-mode">Pixipaint</span>
-          <br>
-          Picross inspired puzzle game where you must color every tile correctly to win
-        </p>
-      </a>
-      <a href="https://juice.hackclub.com/games?hackerId=recoMkC8KrWoN3zHo" class="hoverlink">
-        <img src="images/thumbnails/spadooshka.png" alt="Spadooshka" width="300px">
-        <p>
-          <span style="color: #A37FC3" class="colored-font light-mode">Spadooshka</span>
-          <br>
-          1v1 first-person shooter focused on platforming - made for Hack Club's
-          <b>Juice</b> game jam
-        </p>
-      </a>
-      <a href="https://devpost.com/software/chatgpme" class="hoverlink">
-        <img src="images/thumbnails/chatgpme.png" alt="ChatGPMe" width="300px">
-        <p>
-          <span style="color: #5ba187" class="colored-font light-mode">ChatGPMe</span>
-          <br>
-          A game that won <b>Hack the North 2024</b>
-          where <em>you</em> are the LLM answering peoples' prompts
-        </p>
-      </a>
-      <a href="https://piksal.itch.io/spacecat-adventure" class="hoverlink">
-        <img src="images/thumbnails/spacecatadventure.webp" alt="Spacecat Adventure" width="300px">
-        <p>
-          <span style="color: #7092bb" class="colored-font light-mode">Spacecat Adventure</span>
-          <br>
-          A short platformer and the first game I've ever released online
-        </p>
-      </a>
-    </div>
-    
-  </div>
-
-
-  
-  <!--
-  <footer>
-    <span></span>
-    <img src="images/silly/footer.png">
-  </footer> -->
-</body>
-</html> 
+  </body>
+</html>
