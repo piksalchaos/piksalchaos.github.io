@@ -1,3 +1,6 @@
+This is my old personal website! The new one can be found [here](https://pxlin.space).
+
+---
 # Pixelin's Personal Website!
 
 This is my website where I display info about myself, including links to my projects, socials, and blog!
